@@ -12,8 +12,7 @@ for document in documents:
         unique = Counter(lemmas).keys()
         result += unique
 
-with open ('data/structured/unique.txt', 'w') as f:
-    result = (Counter(result).keys())
-    result = sorted(result)
+with open('data/structured/voacb_lemma.txt', 'w') as f:
+    result = sorted(Counter(result).keys())
     f.writelines('\n'.join(result))
     
